@@ -5,7 +5,7 @@
     <artifactId>onlineshopping</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
-    <name>onlineshopping Maven Webapp</name>
+    <name>onlineshopping</name>
     <url>http://maven.apache.org</url>
 
     <!-- Version information will be stored here -->

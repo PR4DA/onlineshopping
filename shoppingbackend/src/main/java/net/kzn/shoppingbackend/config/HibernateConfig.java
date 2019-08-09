@@ -18,11 +18,11 @@ import java.util.Properties;
 public class HibernateConfig {
 
     // Change the below based on the DBMS you choose
-    private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
+    private final static String DATABASE_URL = "jdbc:h2:mem:onlineshopping/ONLINESHOPPING";
     private final static String DATABASE_DRIVER = "org.h2.Driver";
     private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
-    private final static String DATABASE_USERNAME = "sa";
-    private final static String DATABASE_PASSWORD = "";
+//    private final static String DATABASE_USERNAME = "";
+//    private final static String DATABASE_PASSWORD = "";
 
     // dataSource bean will be available
     @Bean("dataSource")
@@ -33,8 +33,8 @@ public class HibernateConfig {
         // Providing the database connection information
         dataSource.setDriverClassName(DATABASE_DRIVER);
         dataSource.setUrl(DATABASE_URL);
-        dataSource.setUsername(DATABASE_USERNAME);
-        dataSource.setPassword(DATABASE_PASSWORD);
+//        dataSource.setUsername(DATABASE_USERNAME);
+//        dataSource.setPassword(DATABASE_PASSWORD);
 
 
         return dataSource;
@@ -67,7 +67,7 @@ public class HibernateConfig {
         properties.put("hibernate.show_sql", "true");
         properties.put("hibernate.format_sql", "true");
 
-        //properties.put("hibernate.hbm2ddl.auto", "create");
+        properties.put("hibernate.hbm2ddl.auto", "update");
 
 
         return properties;

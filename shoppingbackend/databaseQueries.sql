@@ -1,3 +1,5 @@
+-- CREATE SCHEMA onlineshiping;
+
 CREATE TABLE category
 (
     id          IDENTITY,
